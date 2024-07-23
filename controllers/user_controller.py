@@ -1,7 +1,7 @@
 from flask import request, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import create_access_token
-from models import User, db
+from models.user_model import User, db
 
 def create_user():
     data = request.get_json()

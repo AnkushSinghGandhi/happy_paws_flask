@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from models import Reward, db
+from models.reward_model import Reward, db
 
 def get_rewards():
     rewards = Reward.query.all()

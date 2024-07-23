@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from models import Report, db
+from models.report_model import Report, db
 
 def get_reports():
     reports = Report.query.all()

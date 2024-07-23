@@ -1,5 +1,6 @@
 from flask import request, jsonify
-from models import PawsWallet, Transaction, db
+from models.paws_wallet_model import PawsWallet, db
+from models.transaction_model import Transaction
 
 def get_wallet(user_id):
     wallet = PawsWallet.query.filter_by(user_id=user_id).first()

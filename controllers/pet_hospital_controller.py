@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from models import PetHospital, db
+from models.pet_hospital_model import PetHospital, db
 
 def get_pet_hospitals():
     pet_hospitals = PetHospital.query.all()

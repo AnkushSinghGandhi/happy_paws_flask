@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from models import Feeder, db
+from models.feeder_model import Feeder, db
 
 def get_feeder(id):
     feeder = Feeder.query.get(id)

@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from models import NGO, db
+from models.ngo_model import NGO, db
 
 def get_ngos():
     ngos = NGO.query.all()

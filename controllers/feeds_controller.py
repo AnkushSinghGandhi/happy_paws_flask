@@ -1,5 +1,6 @@
 from flask import jsonify
-from models import Report, Dog
+from models.report_model import Report
+from models.dog_model import Dog
 
 def get_feeds():
     reports = Report.query.order_by(Report.timestamp.desc()).limit(10).all()

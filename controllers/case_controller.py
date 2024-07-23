@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from models import Case, db
+from models.case_model import Case, db
 
 def get_cases():
     cases = Case.query.all()
