@@ -1,0 +1,47 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# Flask instance folder
+instance/
+
+# Flask configuration
+*.cfg
+*.ini
+
+# Database files
+*.sqlite3
+*.db
+*.db-journal
+
+# Environment variables
+.env
+
+# Pytest
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Mac OS X
+.DS_Store
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+Desktop.ini
