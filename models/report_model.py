@@ -9,3 +9,14 @@ class Report(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     dog_id = db.Column(db.Integer, db.ForeignKey('dog.id'), nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+
+    def as_dict(self):
+        return {
+            'id': self.id,
+            'type': self.type,
+            'description': self.description,
+            'location': self.location,
+            'timestamp': self.timestamp,
+            'dog_id': self.dog_id,
+            'user_id': self.user_id
+        }

@@ -10,3 +10,15 @@ class Feeder(db.Model):
     status = db.Column(db.String(120), nullable=True)
     help = db.Column(db.String(120), nullable=True)
     dogs = db.relationship('Dog', backref='feeder', lazy=True)
+
+    def as_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'address': self.address,
+            'phone_no': self.phone_no,
+            'friends': self.friends,
+            'status': self.status,
+            'help': self.help,
+            'dogs': [dog.as_dict() for dog in self.dogs]
+        }

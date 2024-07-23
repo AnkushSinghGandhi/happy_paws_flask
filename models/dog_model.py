@@ -18,3 +18,23 @@ class Dog(db.Model):
     lost = db.Column(db.Boolean, default=False)
     treatment_req = db.Column(db.Boolean, default=False)
     owner_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
+
+    def as_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'gender': self.gender,
+            'photos': self.photos,
+            'videos': self.videos,
+            'locations': self.locations,
+            'tags': self.tags,
+            'behavior': self.behavior,
+            'updated_on': self.updated_on,
+            'vaccine': self.vaccine,
+            'feeder_id': self.feeder_id,
+            'age': self.age,
+            'breed': self.breed,
+            'lost': self.lost,
+            'treatment_req': self.treatment_req,
+            'owner_id': self.owner_id
+        }

@@ -11,3 +11,15 @@ class DogAbuser(db.Model):
     reported_by = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     incident_level = db.Column(db.String(120), nullable=True)
     date_of_case = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def as_dict(self):
+        return {
+            'id': self.id,
+            'photo': self.photo,
+            'media': self.media,
+            'name': self.name,
+            'contact': self.contact,
+            'reported_by': self.reported_by,
+            'incident_level': self.incident_level,
+            'date_of_case': self.date_of_case
+        }
